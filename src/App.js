@@ -1,25 +1,40 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state ={
+      keyboard : ['Q', 'W', 'E', 'A', 'S', 'D', 'Z', 'X', 'C']
+    }
+    this.handleClick=this.handleClick.bind(this);
+  }
+
+  handleClick(event){
+    // event.target.children.play();
+    console.log(event.target.audio);
+  }
+  render(){
+    
+    return (
+      <div id="drum-machine">
+        <div id="display"></div>
+        {this.state.keyboard.map( keyb => 
+        <div className="drum-pad" onClick={this.handleClick}> {keyb}
+          <audio className='clip' id={keyb} >
+              <source src="./sounds/Q.mp3" type="audio/mpeg"/>
+          </audio>
+        </div> )
+        }
+      </div>  
+    )
+
+    
+  }
 }
+
+
 
 export default App;
