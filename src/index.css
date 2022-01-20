@@ -15,12 +15,22 @@ code {
 .drum-pad{
   padding:15px;
   border:1px solid green;
-  width: 45px;
+  /* width: 45px; */
 }
 
-#drum-machine {
+.container {
   border:1px solid yellowgreen;
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  width:50vw;
+  margin:auto;
+}
+
+button{
+  width:auto
+}
+
+#display{
+  text-align: center;
 }
