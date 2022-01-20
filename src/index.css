@@ -17,3 +17,10 @@ code {
   border:1px solid green;
   width: 45px;
 }
+
+#drum-machine {
+  border:1px solid yellowgreen;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
