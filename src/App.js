@@ -52,6 +52,7 @@ class App extends React.Component{
     
     return (
       <div id="drum-machine">
+        <h1>Drum Machine</h1>
         <div id="display">{this.state.display}</div>
         <br/>
         <div className='container'>
